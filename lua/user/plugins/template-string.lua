@@ -1,5 +1,6 @@
 return {
   "axelvc/template-string.nvim",
+  event = { "BufReadPre", "BufNewFile" },
   config = function()
     local templatestring = require("template-string")
 
