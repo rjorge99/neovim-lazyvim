@@ -7,6 +7,7 @@ return {
       "nvim-treesitter/nvim-treesitter-textobjects",
       "nvim-treesitter/nvim-treesitter-context",
       "windwp/nvim-ts-autotag",
+      "p00f/nvim-ts-rainbow",
     },
     config = function()
       -- import nvim-treesitter plugin
@@ -52,6 +53,18 @@ return {
             node_incremental = "<C-space>",
             scope_incremental = false,
             node_decremental = "<bs>",
+          },
+        },
+        rainbow = {
+          enable = true,
+          disable = { "html" },
+          extended_mode = false, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
+          max_file_lines = nil, -- Do not enable for files with more than n lines, int
+          colors = {
+            "#ffd580",
+            "#c3a6ff",
+            "#ffae57",
+            "#bae67e",
           },
         },
       })
