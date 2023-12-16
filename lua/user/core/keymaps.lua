@@ -68,21 +68,6 @@ keymap("v", ">", ">gv", opts)
 ----------------------
 -- Plugin Keybinds
 ----------------------
--- NvimTree
-keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
-
-keymap("n", "<leader>u", ":UndotreeToggle<CR>", opts)
-
-
--- Harpoon
-keymap("n", "<leader>hu", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>", opts)
-keymap("n", "<leader>ha", "<cmd>lua require('harpoon.mark').add_file()<CR>", opts)
-keymap("n", "<leader>hn", "<cmd>lua require('harpoon.ui').nav_next()<CR>", opts)
-keymap("n", "<leader>hp", "<cmd>lua require('harpoon.ui').nav_prev()<CR>", opts)
-keymap("n", "<leader>hh", "<cmd>lua require('harpoon.ui').nav_file(1)<CR>", opts)
-keymap("n", "<leader>ht", "<cmd>lua require('harpoon.ui').nav_file(2)<CR>", opts)
-keymap("n", "<leader>hn", "<cmd>lua require('harpoon.ui').nav_file(3)<CR>", opts)
-keymap("n", "<leader>hs", "<cmd>lua require('harpoon.ui').nav_file(4)<CR>", opts)
 
 -- Varios
 keymap("n", "<leader><leader>r", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
