@@ -13,6 +13,7 @@ return {
     telescope.setup({
       defaults = {
         path_display = { "truncate " },
+        file_ignore_patterns = { "node_modules", ".git/", ".next/", ".git\\", ".next\\", ".jpg", ".jgp", ".bmp" }, -- Que ignore la carpeta de nod
         mappings = {
           i = {
             ["<C-k>"] = actions.move_selection_previous, -- move to prev result
@@ -24,6 +25,7 @@ return {
     })
 
     telescope.load_extension("fzf")
+    -- telescope.load_extension("git_worktree")
 
     -- set keymaps
     local keymap = vim.keymap -- for conciseness
