@@ -52,4 +52,10 @@ return {
     vim.g.enfocado_style = "neon"
     vim.cmd([[colorscheme enfocado]])
   end,
+
+  -- "Mofiqul/vscode.nvim",
+  -- priority = 1000,
+  -- config = function()
+  --   vim.cmd([[colorscheme vscode]])
+  -- end,
 }
