@@ -7,8 +7,10 @@ return {
     -- This feature will not work if the plugin is lazy-loaded
     vim.g.lf_netrw = 1
 
-    require("lf").setup({
-      escape_quit = false,
+    local lf = require("lf")
+
+    lf.setup({
+      escape_quit = true,
       border = "rounded",
     })
   end,
