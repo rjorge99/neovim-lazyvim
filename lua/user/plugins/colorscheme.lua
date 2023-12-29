@@ -68,7 +68,7 @@ return {
   --   end,
   -- },
   {
-    "kwsp/halcyon-neovim",
+    "rjorge99/halcyon-neovim",
     config = function()
       vim.cmd([[colorscheme halcyon]])
     end,
