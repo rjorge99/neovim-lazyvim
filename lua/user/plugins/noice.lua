@@ -36,6 +36,7 @@ return {
       },
       messages = {
         enabled = false,
+        view_warn = "cmdline",
       },
     })
   end,

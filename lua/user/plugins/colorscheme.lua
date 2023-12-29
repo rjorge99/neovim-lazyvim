@@ -59,18 +59,18 @@ return {
   --   vim.cmd([[colorscheme vscode]])
   -- end,
 
-  {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    priority = 1000,
-    config = function()
-      vim.cmd([[colorscheme catppuccin-mocha]])
-    end,
-  },
   -- {
-  --   "kwsp/halcyon-neovim",
+  --   "catppuccin/nvim",
+  --   name = "catppuccin",
+  --   priority = 1000,
   --   config = function()
-  --     vim.cmd([[colorscheme halcyon]])
+  --     vim.cmd([[colorscheme catppuccin-mocha]])
   --   end,
   -- },
+  {
+    "kwsp/halcyon-neovim",
+    config = function()
+      vim.cmd([[colorscheme halcyon]])
+    end,
+  },
 }

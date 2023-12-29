@@ -85,7 +85,7 @@ keymap("n", "<leader><leader>cr", ":Lab code run<cr>", opts)
 keymap("n", "<leader><leader>cs", ":Lab code stop<cr>", opts)
 
 -- Close buffers
-keymap("n", "<leader>bc", "<cmd>Bdelete!<CR>", opts)
+keymap("n", "<leader>bc", ":bd<CR>", opts)
 keymap("n", "<leader>bo", ":%bd|e#|bd#<CR>", opts)
 
 -- Naviagate buffers
