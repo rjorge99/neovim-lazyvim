@@ -5,6 +5,7 @@ return {
     "hrsh7th/cmp-nvim-lsp",
     -- { "antosha417/nvim-lsp-file-operations", config = true }, -- TODO: Check how it works
     "folke/neodev.nvim",
+    "themaxmarchuk/tailwindcss-colors.nvim",
   },
   config = function()
     local lspconfig = require("lspconfig")
@@ -55,6 +56,10 @@ return {
 
       opts.desc = "Restart LSP"
       keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
+
+      if client.name == "tailwindcss" then
+        require("tailwindcss-colors").buf_attach(bufnr)
+      end
     end
 
     -- used to enable autocompletion (assign to every lsp server config)
@@ -62,11 +67,11 @@ return {
 
     -- Change the Diagnostic symbols in the sign column (gutter)
     -- (not in youtube nvim video)
-    -- local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
-    -- for type, icon in pairs(signs) do
-    --   local hl = "DiagnosticSign" .. type
-    --   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
-    -- end
+    local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
+    for type, icon in pairs(signs) do
+      local hl = "DiagnosticSign" .. type
+      vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+    end
 
     -- configure html server
     lspconfig["html"].setup({
@@ -97,6 +102,11 @@ return {
       capabilities = capabilities,
       on_attach = on_attach,
       filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
+    })
+
+    lspconfig["tailwindcss"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
     })
 
     -- configure emmet language server
