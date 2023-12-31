@@ -11,9 +11,7 @@ return {
   },
   config = function()
     local cmp = require("cmp")
-
     local luasnip = require("luasnip")
-
     local lspkind = require("lspkind")
 
     -- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
@@ -44,14 +42,6 @@ return {
         { name = "buffer" }, -- text within current buffer
         { name = "path" }, -- file system paths
       }),
-      -- configure lspkind for vs-code like pictograms in completion menu
-      -- formatting = {
-      --   format = require("tailwindcss-colorizer-cmp").formatter,
-      --   -- format = lspkind.cmp_format({
-      --   --   maxwidth = 50,
-      --   --   ellipsis_char = "...",
-      --   -- }),
-      -- },
       formatting = {
         fields = { "kind", "abbr", "menu" },
         format = lspkind.cmp_format({
@@ -77,8 +67,6 @@ return {
                 return vim_item
               end
             end
-            -- vim_item.kind = icons[vim_item.kind] and (icons[vim_item.kind] .. vim_item.kind) or vim_item.kind
-            -- or just show the icon
             vim_item.kind = lspkind.symbolic(vim_item.kind) and lspkind.symbolic(vim_item.kind) or vim_item.kind
             return vim_item
           end,

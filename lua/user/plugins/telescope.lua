@@ -15,7 +15,6 @@ return {
         override_generic_sorter = true, -- override the generic sorter
         override_file_sorter = true, -- override the file sorter
         case_mode = "smart_case", -- or "ignore_case" or "respect_case"
-        -- the default case_mode is "smart_case"
       },
     },
   },
@@ -49,17 +48,5 @@ return {
     keymap.set("n", "<leader>fb", function()
       telescope.extensions.file_browser.file_browser({ path = "%:p:h", select_buffer = true })
     end, { desc = "File browser" })
-
-    -- -- telescope
-    -- keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
-    -- keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts) -- find files within current working directory, respects .gitignore
-    -- keymap("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", opts) -- find string in current working directory as you type
-    -- keymap("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", opts) -- find string under cursor in current working directory
-    -- keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", opts) -- list open buffers in current neovim instance
-    -- keymap("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts) -- list available help tags
-    -- keymap("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts) -- list available help tags
-    -- keymap("n", "<leader>fk", "<cmd>Telescope keymaps<cr>", opts) -- list available help tags
-    -- keymap("n", "<leader>wt", "<cmd>lua require('telescope').extensions.git_worktree.git_worktrees()<cr>", opts) -- list of worktrees
-    -- keymap("n", "<leader>wT", "<cmd>lua require('telescope').extensions.git_worktree.create_git_worktree()<cr>", opts) -- list of worktrees
   end,
 }

@@ -60,8 +60,6 @@ return {
               ["ic"] = "@conditional.inner",
               ["ab"] = "@block.outer",
               ["ib"] = "@block.inner",
-              -- ["ac"] = "@class.outer",
-              -- ["ic"] = "@class.inner",
             },
           },
         },
