@@ -4,9 +4,6 @@ return {
   config = function()
     local colorizer = require("colorizer")
     colorizer.setup({
-      user_default_options = {
-        tailwind = true,
-      },
       RGB = true, -- #RGB hex codes
       RRGGBB = true, -- #RRGGBB hex codes
       names = true, -- "Name" codes like Blue oe blue
