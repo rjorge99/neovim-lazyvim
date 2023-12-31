@@ -1,3 +1,4 @@
+---@diagnostic disable: missing-fields
 return {
   {
     "nvim-treesitter/nvim-treesitter",
@@ -8,7 +9,7 @@ return {
       "nvim-treesitter/nvim-treesitter-context",
       "nvim-treesitter/playground",
       "windwp/nvim-ts-autotag",
-      "p00f/nvim-ts-rainbow",
+      -- "p00f/nvim-ts-rainbow",
     },
     config = function()
       local treesitter = require("nvim-treesitter.configs")
@@ -63,18 +64,18 @@ return {
             },
           },
         },
-        rainbow = {
-          enable = true,
-          disable = { "html" },
-          extended_mode = false, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
-          max_file_lines = nil, -- Do not enable for files with more than n lines, int
-          colors = {
-            "#ffd580",
-            "#c3a6ff",
-            "#ffae57",
-            "#bae67e",
-          },
-        },
+        -- rainbow = {
+        --   enable = true,
+        --   disable = { "html" },
+        --   extended_mode = false, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
+        --   max_file_lines = nil, -- Do not enable for files with more than n lines, int
+        --   colors = {
+        --     "#ffd580",
+        --     "#c3a6ff",
+        --     "#ffae57",
+        --     "#bae67e",
+        --   },
+        -- },
       })
 
       require("ts_context_commentstring").setup({})
