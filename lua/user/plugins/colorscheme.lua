@@ -46,41 +46,16 @@ return {
   --   end,
   -- },
 
-  -- "wuelnerdotexe/vim-enfocado",
-  -- priority = 1000,
-  -- config = function()
-  --   vim.g.enfocado_style = "neon"
-  --   vim.cmd([[colorscheme enfocado]])
-  -- end,
+  "wuelnerdotexe/vim-enfocado",
+  priority = 1000,
+  config = function()
+    vim.g.enfocado_style = "neon"
+    vim.cmd([[colorscheme enfocado]])
+  end,
 
   -- "Mofiqul/vscode.nvim",
-  -- "rjorge99/darkplus.nvim",
   -- priority = 1000,
   -- config = function()
-  --   -- vim.cmd([[colorscheme darkplus]])
   --   vim.cmd([[colorscheme vscode]])
   -- end,
-
-  -- {
-  --   "catppuccin/nvim",
-  --   name = "catppuccin",
-  --   priority = 1000,
-  --   config = function()
-  --     vim.cmd([[colorscheme catppuccin-mocha]])
-  --   end,
-  -- },
-  {
-    "wuelnerdotexe/vim-enfocado",
-    priority = 1000,
-    config = function()
-      vim.g.enfocado_style = "neon"
-      vim.cmd.colorscheme("enfocado")
-    end,
-  },
-  -- {
-  --   "rjorge99/halcyon-neovim",
-  --   config = function()
-  --     vim.cmd([[colorscheme halcyon]])
-  --   end,
-  -- },
 }
