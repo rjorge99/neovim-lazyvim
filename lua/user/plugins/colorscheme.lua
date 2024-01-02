@@ -14,12 +14,14 @@ return {
     end,
   },
   {
-    "wuelnerdotexe/vim-enfocado",
+    "rjorge99/vim-enfocado",
+    -- "/home/desarrollo/repos/vim-enfocado/",
     priority = 1000,
     config = function()
       vim.g.enfocado_style = "neon"
       vim.cmd([[colorscheme enfocado]])
     end,
+    -- dev = true,
   },
   {
     "rjorge99/halcyon-neovim",
