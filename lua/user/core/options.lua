@@ -5,8 +5,8 @@ opt.relativenumber = true -- set relative numbered lines
 opt.number = true -- set numbered lines
 
 -- tabs & indentation
-opt.tabstop = 2 -- insert 2 spaces for a tab
-opt.shiftwidth = 2 -- the number of spaces inserted for each indentation
+opt.tabstop = 4 -- insert 2 spaces for a tab
+opt.shiftwidth = 4 -- the number of spaces inserted for each indentation
 opt.expandtab = true -- convert tabs to spaces
 
 -- line wrapping
