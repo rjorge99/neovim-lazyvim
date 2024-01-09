@@ -93,6 +93,11 @@ return {
       on_attach = on_attach,
     })
 
+    lspconfig["cssmodules_ls"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+
     -- configure prisma orm server
     lspconfig["prismals"].setup({
       capabilities = capabilities,
